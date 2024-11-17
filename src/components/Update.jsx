@@ -36,7 +36,7 @@ const Update = () => {
             branch:updateform.current[4].value
         }
 
-        await fetch(`http://localhost:5000/form/${id}`,{
+        await fetch(`https://formbackend-i10p.onrender.com/form/${id}`,{
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json'
