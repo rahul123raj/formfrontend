@@ -56,8 +56,8 @@ let handleEdit = async (id) =>{
                   <tr>
                   <td>{i+1}</td>
                   <td>{name}</td>
-                  <td>{mobno}</td>
                   <td>{email}</td>
+                  <td>{mobno}</td>
                   <td>{address}</td>
                   <td>{branch}</td>
                   <td>
