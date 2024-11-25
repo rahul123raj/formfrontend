@@ -40,8 +40,8 @@ let handleEdit = async (id) =>{
               <th>srno</th>
               <th>photo</th>
               <th>name</th>
-              <th>email</th>
               <th>mobile no</th>
+              <th>email</th>
               <th>address</th>
               <th>branch</th>
               <th>actions</th>
