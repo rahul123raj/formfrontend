@@ -36,10 +36,36 @@
     background-color: violet;
     border-collapse: collapse;
     text-align: center;
+    table-layout: fixed;
 }
 
 .table table td,.table table th{
     border: 1px solid black;
+    word-break:break-all;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    /* word-break: keep-all; */
+}
+
+.table table td:nth-child(1),.table table th:nth-child(1){
+    width: 5%;
+}
+.table table td:nth-child(8),.table table th:nth-child(8){
+    width: 18%;
+}
+
+.table table td:nth-child(2),.table table th:nth-child(2){
+    width: 17%;
+}
+.table table td:nth-child(3),.table table th:nth-child(3),
+.table table td:nth-child(4),.table table th:nth-child(4),
+.table table td:nth-child(5),.table table th:nth-child(5),
+.table table td:nth-child(6),.table table th:nth-child(6),
+.table table td:nth-child(7),.table table th:nth-child(7){
+    width: 12%;
+    padding: 0 10px;
+
 }
 
 .table table thead {
