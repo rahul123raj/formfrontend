@@ -7,6 +7,7 @@ const Update = () => {
     let updateform = useRef()
     let [upimg,setupimg] = useState(null)
     let [cnf,setcnf] = useState(true)
+    let [loading, setLoading] = useState(false);
 
     let {id} = useParams()
 
@@ -38,7 +39,9 @@ const Update = () => {
     let  handleupdate = async (e) =>{
         e.preventDefault()
 
-        console.log(updateform)
+        setLoading(true);
+        
+        // console.log(updateform)
         let formdata = new FormData()
         formdata.append('file',updateform.current[0].files[0])
         formdata.append('name',updateform.current[1].value)
@@ -53,8 +56,9 @@ const Update = () => {
             body: formdata,
         })
 
-
-        alert(`your is updated successfully`)
+        setLoading(false);
+        
+        alert(`your data is updated successfully`)
         navigate(`/studentdata`)
     }
 
@@ -78,8 +82,10 @@ const Update = () => {
                 <input type="text" defaultValue={olddata[0].mobno} />
                 <input type="text" defaultValue={olddata[0].address} />
                 <input type="text" defaultValue={olddata[0].branch} />
-                <div className="btn">
-                    <button type='submit' >Update</button>
+                <div className="btn">                            
+                    <button type="submit" disabled={loading}>
+                                {loading ? 'Updating...' : 'Update'} {/* Show loading text */}
+                            </button>
                     <button onClick={handleCancel}>Cancel</button>
                 </div>
             </div>
